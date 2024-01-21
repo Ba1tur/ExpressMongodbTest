@@ -14,7 +14,7 @@ connectDB();
 
 app.use(express.json());
 
-// Не забывай при деплоя на сервер тут поменять сыллку и убрать с коменнта. 
+// Не забывай при деплоя на сервер тут поменять сыллку и убрать с коменнта.
 // const allowedOrigins = ["https://my-js.org"];
 // const corsOptions = {
 //   origin: function (origin, callback) {
@@ -30,14 +30,41 @@ app.use(express.json());
 
 app.use(cors());
 
-
 const addProductsToDatabase = async () => {
   try {
     const productsToAdd = [
-      { id: 1, name: "Socks1", description: "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ", img: "img", alt: "imgs" },
-			{ id: 2, name: "Socks2", description: "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ", img: "img", alt: "imgs" },
-			{ id: 3, name: "Socks3", description: "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ", img: "img", alt: "imgs" },
-			{ id: 4, name: "Socks4", description: "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ", img: "img", alt: "imgs" },
+      {
+        id: 1,
+        name: "Socks1",
+        description:
+          "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ",
+        img: "img",
+        alt: "imgs",
+      },
+      {
+        id: 2,
+        name: "Socks2",
+        description:
+          "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ",
+        img: "img",
+        alt: "imgs",
+      },
+      {
+        id: 3,
+        name: "Socks3",
+        description:
+          "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ",
+        img: "img",
+        alt: "imgs",
+      },
+      {
+        id: 4,
+        name: "Socks4",
+        description:
+          "Suspendisse ut risus accumsan, maximus lacus vitae, efficitur eros. Vivamus convallis vulputate turpis, eget rhoncus dui. ",
+        img: "img",
+        alt: "imgs",
+      },
     ];
 
     await Product.create(productsToAdd);
