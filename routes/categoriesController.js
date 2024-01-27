@@ -28,27 +28,13 @@ router.post("/upload", upload.single("image"), async (req, res) => {
     });
 
     const newCategories = new Categories({
-      name: "Socks 55",
-      description: "Some description lorem pls data contross control log",
+      name: "Брюки",
+      description: "Брюки больших размеров, стильные и молодежные брюки для вашего бренда, лекала для размера Plus Size",
       img: {
         data: result.url, // Используем version
         contentType: req.file.mimetype,
       },
       alt: "Image",
-      products: [
-        {
-          name: "Брюки палаццо",
-          description:
-            "Безупречная посадка. Ассортимент ткани и фурнитуры. Швеи и конструкторы с большим опытом пошива. Лекала для разных моделей и размеров (классические брюки, летние брюки, брюки-кюлоты, брюки-клеш, брюки-бананы).",
-          price: 100,
-          delivery:
-            "1 кг товара — 40-60 руб., срок доставки от 7 дней. 50% предоплата после решения о запуске модели.",
-          img: {
-            data: result.url, // Используем version
-            contentType: req.file.mimetype,
-          },
-        },
-      ],
     });
 
     await newCategories.save();
