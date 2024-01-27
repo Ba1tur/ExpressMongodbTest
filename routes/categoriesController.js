@@ -170,6 +170,7 @@ router.delete("/delete/:categoryId/:productId", async (req, res) => {
     res.status(500).json({ success: false, error: "Internal Server Error" });
   }
 });
+ 
 
 router.post("/upload/:categoryId", upload.single("image"), async (req, res) => {
   try {
