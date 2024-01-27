@@ -104,7 +104,7 @@ router.get("/categories/:id", async (req, res) => {
 router.put("/update/:id", upload.single("image"), async (req, res) => {
   try {
     const secretKey = req.body.secretKey;
-    if (secretKey !== "sos") {
+    if (secretKey !== process.env.SECRET_KEY) {
       return res
         .status(403)
         .json({ success: false, error: "Invalid secretKey" });
@@ -155,7 +155,7 @@ router.put("/update/:id", upload.single("image"), async (req, res) => {
 router.delete("/delete/:categoryId/:productId", async (req, res) => {
   try {
     const secretKey = req.body.secretKey;
-    if (secretKey !== "sos") {
+    if (secretKey !== process.env.SECRET_KEY) {
       return res
         .status(403)
         .json({ success: false, error: "Invalid secretKey" });
@@ -188,7 +188,7 @@ router.delete("/delete/:categoryId/:productId", async (req, res) => {
 router.post("/upload/:categoryId", upload.single("image"), async (req, res) => {
   try {
     const secretKey = req.body.secretKey;
-    if (secretKey !== "sos") {
+    if (secretKey !== process.env.SECRET_KEY) {
       return res
         .status(403)
         .json({ success: false, error: "Invalid secretKey" });
