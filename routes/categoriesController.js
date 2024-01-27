@@ -28,8 +28,8 @@ router.post("/upload", upload.single("image"), async (req, res) => {
     });
 
     const newCategories = new Categories({
-      name: "Платья",
-      description: "Женские платья больших размеров, шифоновые платья, высылаем каталог тканей",
+      name: "Худи",
+      description: "Турецкие худи дешевле, чем в России",
       img: {
         data: result.url, // Используем version
         contentType: req.file.mimetype,
