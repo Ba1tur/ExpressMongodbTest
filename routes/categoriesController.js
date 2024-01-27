@@ -28,8 +28,8 @@ router.post("/upload", upload.single("image"), async (req, res) => {
     });
 
     const newCategories = new Categories({
-      name: "Юбки",
-      description: "Юбки больших размеров, стильные и молодежные юбки для вашего бренда, лекала для размера Plus Size",
+      name: "Жакеты",
+      description: "Лекала для разных моделей и размеров",
       img: {
         data: result.url, // Используем version
         contentType: req.file.mimetype,
