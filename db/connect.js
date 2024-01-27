@@ -8,9 +8,11 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+
     console.log("Подключено к базе данных");
   } catch (error) {
     console.error("Ошибка подключения к базе данных:", error);
+    mongoose.connection.close();
   }
 };
 
