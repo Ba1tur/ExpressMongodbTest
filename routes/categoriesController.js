@@ -28,8 +28,8 @@ router.post("/upload", upload.single("image"), async (req, res) => {
     });
 
     const newCategories = new Categories({
-      name: "Жакеты",
-      description: "Лекала для разных моделей и размеров",
+      name: "Платья",
+      description: "Женские платья больших размеров, шифоновые платья, высылаем каталог тканей",
       img: {
         data: result.url, // Используем version
         contentType: req.file.mimetype,
