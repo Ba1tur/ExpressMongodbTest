@@ -20,7 +20,7 @@ router.post("/send-email", (req, res) => {
   // Опции электронного письма
   const mailOptions = {
     from: process.env.USER_EMAIL,
-    to: "lalalalotvovo@gmail.com",
+    to: "Shukur100_81@mail.ru",
     subject: "Новое сообщение",
     // text: `Заголовок: ${title}\nТелефон: ${tel}\nEmail: ${email}`,
     html: `
